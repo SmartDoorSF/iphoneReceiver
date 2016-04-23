@@ -43,12 +43,12 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
         let newBeacon = beacons[0]
         print(newBeacon)
         self.Found.text = "Yes!"
-        self.UUID.text = "/newBeacon.proximityUUID"
-        self.major.text = "/(newBeacon.major)"
-        self.Minor.text = "/(newBeacon.minor)"
-        self.Accuracy.text = "/(newBeacon.accuracy)"
-        self.Distance.text = "/(newBeacon.proximity)"
-        self.RSSI.text = "/(newBeacon.rssi)"
+        self.UUID.text = "\(newBeacon.proximityUUID)"
+        self.major.text = "\(newBeacon.major)"
+        self.Minor.text = "\(newBeacon.minor)"
+        self.Accuracy.text = "\(newBeacon.accuracy)"
+        self.Distance.text = "\(newBeacon.proximity)"
+        self.RSSI.text = "\(newBeacon.rssi)"
         
     }
 }

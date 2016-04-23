@@ -34,16 +34,22 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
  
     func locationManager(manager: CLLocationManager, didRangeBeacons beacons: [CLBeacon], inRegion region: CLBeaconRegion) {
         
-        print(beacons[0])
         updateInterface(beacons)
         
     }
     
     func updateInterface(beacons: [CLBeacon]){
-        //pass beacon in here and update everything
+        
         let newBeacon = beacons[0]
         print(newBeacon)
+        self.Found.text = "Yes!"
+        self.UUID.text = "/newBeacon.proximityUUID"
         self.major.text = "/(newBeacon.major)"
+        self.Minor.text = "/(newBeacon.minor)"
+        self.Accuracy.text = "/(newBeacon.accuracy)"
+        self.Distance.text = "/(newBeacon.proximity)"
+        self.RSSI.text = "/(newBeacon.rssi)"
+        
     }
 }
 
